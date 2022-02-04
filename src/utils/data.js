@@ -1,0 +1,17 @@
+export const SuggestionData = [
+  "bat",
+  "base",
+  "basement",
+  "bake",
+  "cat",
+  "sun",
+  "cap",
+  "nap",
+  "table",
+  "run",
+  "cable",
+  "task",
+  "problem",
+  "solution",
+  "map",
+];

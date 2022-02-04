@@ -1,0 +1,36 @@
+.topBox {
+  border: 2px solid;
+  height: 200px;
+  display: grid;
+}
+.input_div {
+  align-self: center;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  text-align: center;
+}
+.input_box {
+  width: 50%;
+}
+button {
+  background-color: green;
+  color: white;
+  text-transform: none;
+  font-weight: bold;
+}
+.body_box {
+  border: 2px solid;
+  min-height: 400px;
+  height: 100%;
+  padding: 24px;
+}
+li {
+  list-style: none;
+}
+h3 {
+  text-align: center;
+}
+.filter_list {
+  cursor: pointer;
+}
