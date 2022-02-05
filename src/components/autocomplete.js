@@ -46,7 +46,11 @@ const AutoComplete = () => {
             <button className="button">Search</button>
           </Grid>
         </Box>
-        <Box m={1} className="body_box">
+        <Box
+          m={1}
+          className="body_box"
+          style={{ display: filterSuggestion.length <= 0 ? "grid" : "inherit" }}
+        >
           {inputValue.length <= 0 ? (
             SuggestionData.map((obj, i) => <li key={i}>{obj}</li>)
           ) : (

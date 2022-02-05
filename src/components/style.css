@@ -24,6 +24,8 @@ button {
   min-height: 400px;
   height: 100%;
   padding: 24px;
+  /* display: grid; */
+  align-items: center;
 }
 li {
   list-style: none;
