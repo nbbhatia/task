@@ -29,14 +29,9 @@ const AutoComplete = () => {
   return (
     <Container>
       <Grid md={12} item>
+        <h1>React Task</h1>
         <Box m={1} className="topBox">
-          <Grid
-            md={12}
-            container
-            justifyContent="center"
-            item
-            className="input_div"
-          >
+          <Grid md={12} container item className="input_div">
             <input
               type="text"
               onChange={handleChange}
