@@ -12,8 +12,8 @@ const AutoComplete = () => {
   const handleChange = (e) => {
     let value = e.target.value;
     setInputValue(value);
-    const filteredSuggestions = SuggestionData.filter((suggestion) =>
-      suggestion.toLowerCase().includes(value.toLowerCase())
+    const filteredSuggestions = SuggestionData.filter((val) =>
+      val.includes(value.toLowerCase())
     );
     setFilterSuggestion(filteredSuggestions);
     setDisplaySuggestion(true);

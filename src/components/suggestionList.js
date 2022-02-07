@@ -15,7 +15,12 @@ const suggestionlist = (props) => {
       );
     });
   } else {
-    return <h3>No suggestions available...</h3>;
+    return (
+      <h3>
+        No items found
+        <br /> Please search with a different keyword{" "}
+      </h3>
+    );
   }
 };
 
