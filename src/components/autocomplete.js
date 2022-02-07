@@ -5,25 +5,20 @@ import "./style.css";
 import { SuggestionData } from "../utils/data";
 const AutoComplete = () => {
   const [inputValue, setInputValue] = useState("");
-  const [filterSuggestion, setFilterSuggestion] = useState([]);
-  const [selectSuggestion, setSelectSuggestion] = useState(0);
-  const [displaySuggestion, setDisplaySuggestion] = useState(false);
+  const [filterSuggestion, setFilterSuggestion] = useState();
 
   const handleChange = (e) => {
     let value = e.target.value;
     setInputValue(value);
     const filteredSuggestions = SuggestionData.filter((val) =>
-      val.includes(value.toLowerCase())
+      val.startsWith(value)
     );
     setFilterSuggestion(filteredSuggestions);
-    setDisplaySuggestion(true);
   };
 
-  const handleSelection = (index) => {
-    setSelectSuggestion(index);
-    setInputValue(filterSuggestion[index]);
-    setFilterSuggestion([]);
-    setDisplaySuggestion(false);
+  const handleSelection = (selectedVal) => {
+    setInputValue(selectedVal);
+    setFilterSuggestion([selectedVal]);
   };
 
   return (
@@ -44,15 +39,15 @@ const AutoComplete = () => {
         <Box
           m={1}
           className="body_box"
-          style={{ display: filterSuggestion.length <= 0 ? "grid" : "inherit" }}
+          style={{
+            display: filterSuggestion?.length <= 0 ? "grid" : "inherit",
+          }}
         >
           {inputValue.length <= 0 ? (
             SuggestionData.map((obj, i) => <li key={i}>{obj}</li>)
           ) : (
             <Suggestion
               inputValue={inputValue}
-              selectSuggestion={selectSuggestion}
-              displaySuggestion={displaySuggestion}
               final_suggestion={filterSuggestion}
               onSelectSuggestion={handleSelection}
               suggestionData={SuggestionData}

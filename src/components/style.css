@@ -23,6 +23,7 @@ button {
   color: white;
   text-transform: none;
   font-weight: bold;
+  cursor: pointer;
 }
 .body_box {
   border: 2px solid;

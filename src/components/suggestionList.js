@@ -2,12 +2,13 @@ import React from "react";
 
 const suggestionlist = (props) => {
   const { final_suggestion, onSelectSuggestion } = props;
-  if (final_suggestion.length > 0) {
+
+  if (final_suggestion?.length > 0) {
     return final_suggestion.map((suggestion, index) => {
       return (
         <li
           key={index}
-          onClick={() => onSelectSuggestion(index)}
+          onClick={() => onSelectSuggestion(suggestion)}
           className="filter_list"
         >
           {suggestion}
